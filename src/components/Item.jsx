@@ -23,7 +23,7 @@ const ItemList = ({ itemData }) => {
     console.log(boxid);
 
     axios
-      .delete(`http://ws-study.shop:3000/mypages/${boxid}`, {
+      .delete(`https://yd-light.shop/mypages/${boxid}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -53,6 +53,7 @@ const ItemList = ({ itemData }) => {
   return (
     <StItem>
       <div>{itemData.randomItem.name}</div>
+      <div>{itemData.randomItem.goodsDetail}</div>
       <StButton>
         <Button size="md" onClick={() => alert('배송을 시작하겠습니다.')}>
           배송하기
